@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet SIG - Webmapping</title>
+    <link rel="stylesheet" href="mise_en_page_css.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="top-header">
+        <h1> TD Projet SIG </h1>
+    </div>
+
+    <!-- MENU -->
+    <nav class="navbar">
+        <ul>
+            <li class="menu1">
+                <h4><a href="#carte1">Donnée par IRIS</a></h4>
+            </li>
+            <li class="menu1">
+                <h4><a href="#carte2">Donnée à l'échelle des bâtiments</a></h4>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="hero">
+    <h1>L’ancienneté du bâti face à la rénovation énergétique à Nantes </h1>
+    <h2>Imagerie et projet SIG</h2>
+</section>
+
+<section class="bloc">
+    <h2>Résumé</h2>
+    <p>En lien avec les objectifs de développement durable et les enjeux socio-environnementaux actuels, la rénovation énergétique des bâtiments est devenue une priorité des politiques publiques, s'appuyant largement sur le Diagnostic de Performance Énergétique (DPE). À travers le cas de la métropole nantaise, cette étude interroge la vulnérabilité énergétique de la « ville héritée » en croisant l'âge du bâti et les scores DPE. La méthodologie déploie une approche multi-scalaire combinant l'analyse spatiale sous SIG (BD TOPO, BDNB) et des traitements statistiques (tests du Chi-deux et corrélations de Spearman avec Rstudio). Les résultats démontrent une corrélation significative, bien que modérée, entre l'ancienneté des constructions et la dégradation de leur étiquette énergétique. Si les bâtiments antérieurs à 1974 (et particulièrement ceux d'avant 1948) concentrent statistiquement les « passoires thermiques » (classes F et G), la cartographie 3D révèle que cette précarité thermique est hyper-localisée dans le centre historique de Nantes. La discussion met en perspective ces résultats quantitatifs avec les limites techniques de l'outil DPE — souvent inadapté aux propriétés intrinsèques des matériaux anciens —, le dilemme de la préservation patrimoniale, et les risques socio-spatiaux majeurs (précarité énergétique, gentrification par éviction) qu'engendre l'injonction à la rénovation dans les centres urbains denses. </p>
+</section>
+
+<!-- ================= CARTE 1 ================= -->
+<section class="bloc carte" id="carte1">
+    <div class="text-carte">
+        
+        <!-- Texte à gauche -->
+        <div class="texte">
+            <h2>Donnée par IRIS</h2>
+            <p>Cette carte présente l'étiquette énergétique (DPE) majoritaire pour chaque quartier (IRIS) de la métropole. Elle montre une répartition hétérogène des performances énergétiques sur le territoire, avec une concentration globale des scores les plus faibles (F et G) dans les secteurs centraux et péricentraux.</p>
+        </div>
+
+        <!-- Carte à droite -->
+        <div class="carte-container">
+            <iframe src="qgis2web_iris/index.html" class="mapframe"></iframe>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CARTE 2 ================= -->
+<section class="bloc carte" id="carte2">
+    <div class="text-carte">
+        
+        <!-- Carte à gauche -->
+        <div class="carte-container">
+            <iframe src="qgis2web_bat/index.html" class="mapframe"></iframe>
+        </div>
+
+        <!-- Texte à droite -->
+        <div class="texte">
+            <h2>Donnée à l'échelle des bâtiments</h2>
+            <p>Cette carte illustre la répartition des bâtiments de la métropole nantaise selon leur période de construction. Elle met en évidence une concentration du bâti ancien (antérieur à 1940) dans le centre-ville, entouré par des zones de constructions de plus en plus récentes à mesure que l'on s'éloigne vers la périphérie.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= Conclusion ================= -->
+<section class="bloc carte">
+    <h2>Conclusion</h2>
+    <p>Si nos analyses statistiques et spatiales désignent clairement le bâti ancien comme le « mauvais élève » de la transition énergétique nantaise, elles soulignent surtout la complexité du problème. La surreprésentation des passoires thermiques dans le centre historique interroge autant la réalité physique des bâtiments que l'inadaptation de l'outil DPE face aux propriétés des matériaux patrimoniaux. Finalement, la rénovation énergétique ne peut se résumer à une simple équation technique. Pour réussir sans défigurer la « ville héritée » ni provoquer une gentrification par éviction, elle exige une approche sur-mesure et territorialisée, capable de concilier préservation architecturale, adaptation des outils de mesure et protection sociale des habitants. </p>
+</section>
+
+<footer>
+    <p>© 2026 – Bayrand Marilyse</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
